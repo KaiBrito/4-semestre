@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget de Avaliação</title>
+    <style>
+        .rating {
+            display: inline-block;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            float: right;
+            font-size: 30px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .rating label:after {
+            content: '\2605'; /* Estrela vazia */
+        }
+
+        .rating input:checked ~ label:after {
+            content: '\2605'; /* Estrela preenchida */
+            color: orange; /* Cor da estrela preenchida */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="rating">
+        <input type="radio" name="rating" id="star1">
+        <label for="star1">1</label>
+        <input type="radio" name="rating" id="star2">
+        <label for="star2">2</label>
+        <input type="radio" name="rating" id="star3">
+        <label for="star3">3</label>
+        <input type="radio" name="rating" id="star4">
+        <label for="star4">4</label>
+        <input type="radio" name="rating" id="star5">
+        <label for="star5">5</label>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+#menu li {   
+    display: inline;
+    background-color: #AAAAAA;
+    padding: 8px 5px;
+}
+
+#menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFFFFF; 
+}
+
+#menu ul li:hover {
+    background-color: #3299CC;
+}
+
+#menu ul li a:hover {
+    color: #AAAAAA;
+}

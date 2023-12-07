@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Vida Mais Saborosa">
+    <meta name="description" content="Um lugar onde você encontra as melhores receitas para deixar sua comida saborosa">
+    <meta name="copyright" content="&copy2023 VidaMaisSaborosa">
+    <meta name="keywords" content="comidas, receitas, vida, sabor, saborosa, bebidas">
+    <meta name="datecreate" content="30/10/2023">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/pagina-cadastro-receita.css">
+
+    <title>VidaMaisSaborosa</title>
+</head>
+<body class="bg-graymain">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-orange">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="imgs/logo-site.png" alt="logo site" class="img-config"></a>
+          <h1 class="m-2">Vida mais saborosa</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 mx-4 w-75">
+              <li class="nav-item mx-4 bg-yellow border-buttons buttons-header button-login">
+                <a class="nav-link text-center" href="pagina-login.html">Login</a>
+              </li>
+              <li class="nav-item bg-yellow border-buttons buttons-header">
+                <a class="nav-link text-center" href="pagina-cadastro.html">Cadastre-se</a>
+              </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0" role="search">
+              <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0 button-search" type="submit"> <img src="imgs/lupa.png" width="30px"> </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <ul class="nav bg-gray overflow-x">
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="pagina-inicial.html">Início</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Massas</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Bebidas</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Bolos</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Carnes</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Sopas</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Sanduíches</a>
+        </li>
+      </ul>
+    </header>
+
+    <main class="width-95 mx-auto bg-white m-5 p-3 border rounded">
+
+        <h2 class="text-center">Formulário de cadastro</h2>
+
+        <form class="row needs-validation" id="recipe-register-form" novalidate>
+            <div class="bg-gray col-md-4">
+                <div>
+                    <label for="txtNome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="txtNome" name="recipeName" placeholder="Chocolate" required>
+                </div>
+                <div>
+                    <label for="txtDescricao" class="form-label">Descrição</label>
+                    <textarea class="form-control" id="txtDescricao" name="description" placeholder="Um sabor incrível..." required></textarea>
+                </div>
+                <div>
+                    <label for="recipe-images" class="form-label">Anexe suas imagens aqui</label>
+                    <input type="file" multiple class="form-control" name="images" id="recipe-images" required>
+                </div>
+            </div>
+            <div class="bg-gray col-md-4">
+                <div>
+                    <label for="txtAutor" class="form-label">Autor</label>
+                    <input type="text" class="form-control" id="txtAutor" name="author" placeholder="Ramalho" required>
+                </div>
+                <div>
+                    <label for="txtInstrucao" class="form-label">Instruções de preparo</label>
+                    <textarea class="form-control" id="txtInstrucao" name="preparationInstructions" placeholder="1 - pegue 500ml..." required></textarea>
+                </div>
+                <div class="row">
+                    <p class="col-12">Selecione as categorias:</p>
+
+                    <div class="col-6">
+                      <input type="checkbox" id="txtBebida" name="categorias" value="bebidas">
+                      <label for="txtBebida">Bebidas</label><br>
+
+                      <input type="checkbox" id="txtMassa" name="categorias" value="massas">
+                      <label for="txtMassa">Massas</label><br>
+
+                      <input type="checkbox" id="txtSopa" name="categorias" value="sopas">
+                      <label for="txtSopa">Sopas</label><br>
+                    </div>
+
+                    <div class="col-6">
+                      <input type="checkbox" id="txtBebida" name="categorias" value="bolos">
+                      <label for="txtBebida">Bolos</label><br>
+
+                      <input type="checkbox" id="txtMassa" name="categorias" value="carnes">
+                      <label for="txtMassa">Carnes</label><br>
+
+                      <input type="checkbox" id="txtSopa" name="categorias" value="sanduíches">
+                      <label for="txtSopa">Sanduíches</label><br>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bg-gray col-md-4 row">
+                <div class="col-md-12">
+                    <label for="txtMetodo" class="form-label">Método de cozimento</label>
+                    <select class="form-select" id="txtMetodo" name="method" required>
+                        <option selected value="assado">Assado</option>
+                        <option value="cozido">Cozido</option>
+                        <option value="frito">Frito</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="txtPorcao" class="form-label">Porções</label>
+                    <input type="number" class="form-control" id="txtPorcao" name="portions" placeholder="2" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="txtTempoPreparo" class="form-label">Tempo de preparo</label>
+                    <input type="number" class="form-control" id="txtTempoPreparo" name="preparationTime" placeholder="120" required>
+                </div>
+                <div class="col-md-12">
+                    <label for="txtValorNutri" class="form-label">Valor nutricional</label>
+                    <input type="number" class="form-control" name="nutricionalValue" id="txtValorNutri" placeholder="650" required>
+                </div>
+            </div>
+
+            <div class="bg-gray col-md-12">
+              <div id="lista-ingredientes">
+                
+              </div>
+
+              <button class="btn btn-primary" type="button" onclick="adicionarIngrediente()">Novo Ingrediente</button>
+            </div>
+
+            <div class="col-12 mt-2 px-auto">
+                <button class="btn btn-success" type="submit">Cadastrar</button>
+            </div>
+        </form>    
+    </main>
+
+    <footer class="row bg-yellow py-2"> 
+      <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+        <span class="text-center">Kaique <br> e <br> Rômulo</span>
+      </div>
+      <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+        <span> 
+          <a href="https://github.com/KaiBrito">https://github.com/KaiBrito</a> <br>
+          <a href="https://github.com/Romulo-Moraes">https://github.com/Romulo-Moraes</a>
+        </span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="./scripts/cadastro-receita.js"></script>
+</body>
+</html>

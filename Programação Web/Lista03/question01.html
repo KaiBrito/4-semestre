@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Kaique">
+        <meta name="description" content="Criando um formulário de cadastro">
+        <meta name="copyright" content="&copy 2023 Kaique">
+        <meta name="keywords" content="forms, cadastro, input, divs, label">
+        <meta name="date:create" content="22/08/2023">
+
+        <title>Formulário de Cadastro</title>
+    </head>
+    <body>
+        <form action="http://cafe.intermidia.icmc.usp.br:22080/humberto/formulario.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div>
+                    <label for="txtNome">Nome:</label>
+                    <input type="text" name="nNome" id="txtNome" maxlength="20"/>
+                </div>
+                <div>
+                    <label for="txtDtNasc">Data de nascimento:</label>
+                    <input type="date" name="nDtNasc" id="txtDtNasc"/>
+                </div>
+                <div>
+                    Sexo:
+                    <input type="radio" name="nSexo" id="radioMasc" value="M"/>
+                    <label for="radioMasc">Masculino</label>
+                    <input type="radio" name="nSexo" id="radioFem" value="F"/>
+                    <label for="radioFem">Feminino</label>
+                </div>
+                <div>
+                    Situação Civil:
+                    <input type="radio" name="nSituacao" id="radioSolteiro" value="Solteiro"/>
+                    <label for="radioSolteiro">Solteiro(a)</label>
+                    <input type="radio" name="nSituacao" id="radioCasado" value="Casado"/>
+                    <label for="radioCasado">Casado(a)</label>
+                    <input type="radio" name="nSituacao" id="radioDivorciado" value="Divorciado"/>
+                    <label for="radioDivorciado">Divorciado(a)</label>
+                    <input type="radio" name="nSituacao" id="radioViuvo" value="Viuvo"/>
+                    <label for="radioViuvo">Viúvo(a)</label>
+                    <input type="radio" name="nSituacao" id="radioOutra" value="Outra"/>
+                    <label for="radioOutra">Outra</label>
+                </div>
+                <div>
+                    <label for="txtCPF">CPF:</label>
+                    <input type="text" name="nCPF" id="txtCPF" placeholder="000.000.000-00" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"/>
+                </div>
+                <div>
+                    <label for="txtRG">RG:</label>
+                    <input type="text" name="nRG" id="txtRG" placeholder="00000000" pattern="[0-9]{8}"/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dados de Endereço</legend>
+                <div>
+                    <label for="txtEnd">Endereço:</label>
+                    <input type="text" name="nEnd" id="txtEnd"/>
+                </div>
+                <div>
+                    <label for="txtNum">Número:</label>
+                    <input type="number" name="nNum" id="txtNum"/>
+                </div>
+                <div>
+                    <label for="txtComplt">Complemento:</label>
+                    <input type="text" name="nComplt" id="txtComplt"/>
+                </div>
+                <div>
+                    <label for="txtBairro">Bairro:</label>
+                    <input type="text" name="nBairro" id="txtBairro"/>
+                </div>
+                <div>
+                    <label for="txtEstado">Estado:</label>
+                    <select name="nEstado" id="txtEstado">
+                        <option value="AC" selected>Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="txtCidade">Cidade:</label>
+                    <input type="text" name="nCidade" id="txtCidade">
+                </div>
+                <div>
+                    <label for="txtCEP">CEP:</label>
+                    <input type="text" name="nCEP" id="txtCEP" placeholder="00.000-000" pattern="[0-9]{2}.[0-9]{3}-[0-9]{3}">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dados de login</legend>
+                <div>
+                    <label for="txtEmail">E-mail:</label>
+                    <input type="email" name="nEmail" id="txtEmail" placeholder="seuemail@dominio.com">
+                </div>
+                <div>
+                    <label for="txtImgPerfil">Imagem de perfil:</label>
+                    <input type="file" name="nImgPerfil" id="txtImgPerfil">
+                </div>
+                <div>
+                    <label for="txtLogin">Login de usuário:</label>
+                    <input type="text" name="nLogin" id="txtLogin" maxlength="20" >
+                </div>
+                <div>
+                    <label for="txtSenha">Senha:</label>
+                    <input type="password" name="nSenha" id="txtSenha">
+                </div>
+                <div>
+                    <label for="txtConfirmSenha">Confirme a senha:</label>
+                    <input type="password" name="nConfirmSenha" id="txtConfirmSenha">
+                </div>
+            </fieldset>
+            <div>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+    </body>
+</html>

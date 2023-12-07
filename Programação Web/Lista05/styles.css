@@ -1,0 +1,122 @@
+/*Arquivo CSS*/
+.turtle {
+    display: grid;
+    grid-template-areas: "name" "mask" "description";
+    grid-row: 1fr 1fr 1fr;
+    grid-column: auto;
+}
+
+.name {
+    display: flex;
+    background-color: black;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    grid-area: name;
+}
+
+.description {
+    display: flex;
+    background-color: green;
+    padding: 20px 0;
+    justify-content: center;
+    grid-area: description;
+}
+
+.description ul {
+    margin: 0;
+}
+
+.mask {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    grid-area: mask;
+}
+
+.leonardo .name {
+    color: blue;
+}
+
+.leonardo .mask {
+    background-color: blue;
+}
+
+.raphael .name {
+    color: red;
+}
+
+.raphael .mask {
+    background-color: red;
+}
+
+.michelangelo .name {
+    color: yellow;
+}
+
+.michelangelo .mask {
+    background-color: yellow;
+}
+
+.donatello .name {
+    color: purple;
+}
+
+.donatello .mask {
+    background-color: purple;
+}
+
+@media screen and (min-width: 750px){
+    body {
+        margin: 0;
+    }
+
+    .leonardo .turtle, .michelangelo .turtle {
+        display: grid;
+        grid-row: auto auto;
+        grid-column: auto auto;
+    }
+
+    .leonardo .name {
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+    .leonardo .mask {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .leonardo .description {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+
+    .michelangelo .name {
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+    .michelangelo .description {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .michelangelo .mask {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+
+    .raphael .description ul {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .donatello .description ul {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-around;
+    }
+}

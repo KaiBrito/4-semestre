@@ -1,0 +1,31 @@
+h1 {
+    border-top: 1px solid #CDCDCD;
+}
+
+#menu ul {
+    border-top: 2px solid #CDCDCD;
+    color: #000000;
+    list-style: none;
+    font-size: 15px; 
+}
+
+#menu li {   
+    display: inline;
+}
+
+#menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#menu ul li a:hover {
+    border-left: 1px solid #CDCDCD;
+    border-right: 1px solid #CDCDCD;
+    color: #FF0000;
+}
+
+#menu ul li:hover {
+    border-top: 2px solid #FF0000;
+}

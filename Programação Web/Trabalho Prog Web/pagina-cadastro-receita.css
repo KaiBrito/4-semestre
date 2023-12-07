@@ -1,0 +1,49 @@
+footer {
+    background-color: #FFD700;
+    height: 5em;
+}
+
+.h-100vh {
+    height: 60vh;
+}
+
+.bg-gray {
+    background-color: #F0F0F0;
+}
+
+.bg-graymain {
+    background-color: #D9D9D9;
+}
+
+.bg-yellow {
+    background-color: #FFD700;
+}
+
+.buttons-header {
+    width: 70%;
+}
+
+.border-buttons {
+    border-radius: 50px;
+}
+
+.justify-self-start {
+    justify-self: flex-start;
+}
+
+.button-search {
+    border: none;
+}
+
+.button-search:hover {
+    background-color: #FFD700;
+}
+
+.width-95 {
+    width: 95%;
+}
+
+header nav {
+    background-color: #FF6A28;
+}
+

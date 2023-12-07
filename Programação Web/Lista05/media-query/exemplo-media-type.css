@@ -1,0 +1,43 @@
+body {
+  background-color: lightgrey;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > h1 {
+  margin: 0px;
+}
+
+nav > button {
+  background-color: lightsalmon;
+  width: 100px;
+  font-size: 1.5rem;
+}
+
+@media print and (orientation: portrait) {
+  header {
+    justify-content: flex-start;
+  }
+}
+
+@media all and (max-width: 800px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 450px) {
+  header > nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav > button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

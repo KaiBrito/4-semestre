@@ -1,0 +1,32 @@
+header {
+    background-color: #003509;
+    text-align: end;
+    color: #FFFFFF;
+    padding-top: 5px;
+}
+
+header h1 {
+    padding-right: 10px;
+}
+
+.autor {
+    background-color: #7CA832;
+    padding: 5px 10px 5px 0;
+}
+
+main {
+    text-align: justify;
+    margin: 50px 250px;
+    padding: 0 50px;
+}
+
+footer {
+    text-align: center;
+    background-color: #142000;
+    color: #FFFFFF;  
+    padding: 2px 0;
+}
+
+footer p {
+    margin: 0;
+}

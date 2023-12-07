@@ -1,0 +1,43 @@
+main {
+  display: grid;
+  grid-template-rows: 200px 300px;
+  grid-template-columns: 100px auto 50% 150px;
+  /* grid-template: 200px 300px / 100px auto 50% 150px; */
+  /* grid-template-rows: repeat(2, 200px); */
+  /* grid-template-columns: repeat(4, 25%); */
+  /* grid-template: repeat(2, 200px) / repeat(4, 1fr); */
+  margin: auto;
+  width: 1200px;
+}
+
+#div1 {
+  background-color: lightcoral;
+}
+
+#div2 {
+  background-color: lightblue;
+}
+
+#div3 {
+  background-color: lightgoldenrodyellow;
+}
+
+#div4 {
+  background-color: lightgray;
+}
+
+#div5 {
+  background-color: lightgreen;
+}
+
+#div6 {
+  background-color: lightsalmon;
+}
+
+#div7 {
+  background-color: lightseagreen;
+}
+
+#div8 {
+  background-color: lightskyblue;
+}

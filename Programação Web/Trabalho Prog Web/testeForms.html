@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Receita</title>
+    <style>
+        .ingredientes {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="formulario-receita">
+        <div id="lista-ingredientes">
+            <!-- Os campos de ingrediente serão adicionados aqui -->
+        </div>
+        <button type="button" onclick="adicionarIngrediente()">Novo Ingrediente</button>
+        <input type="submit" value="Salvar Receita">
+    </form>
+
+    <script>
+        let contadorIngredientes = 1;
+
+        function adicionarIngrediente() {
+            const listaIngredientes = document.getElementById('lista-ingredientes');
+
+            // Criar um novo conjunto de campos
+            const novoIngrediente = document.createElement('div');
+            novoIngrediente.classList.add('ingredientes');
+            novoIngrediente.innerHTML = `
+                <label for="nomeIngrediente${contadorIngredientes}">Nome do Ingrediente:</label>
+                <input type="text" id="nomeIngrediente${contadorIngredientes}" name="nomeIngrediente[]" required>
+                <label for="quantidade${contadorIngredientes}">Quantidade:</label>
+                <input type="text" id="quantidade${contadorIngredientes}" name="quantidade[]" required>
+                <label for="unidade${contadorIngredientes}">Unidade:</label>
+                <input type="text" id="unidade${contadorIngredientes}" name="unidade[]" required>
+            `;
+
+            // Adicionar o novo conjunto de campos à lista
+            listaIngredientes.appendChild(novoIngrediente);
+
+            // Incrementar o contador para garantir IDs únicos
+            contadorIngredientes++;
+        }
+    </script>
+
+</body>
+</html>

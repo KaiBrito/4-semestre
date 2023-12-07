@@ -1,0 +1,27 @@
+.width-95 {
+    width: 95%;
+}
+
+.bg-gray {
+    background-color: #F0F0F0;
+}
+
+.bg-graymain {
+    background-color: #D9D9D9;
+}
+
+.bg-yellow {
+    background-color: #FFD700;
+}
+
+.avaliacao {
+    font-size: 24px;
+}
+
+.avaliacao label {
+    color: #ff5e5e; /* Cor das estrelas preenchidas */
+}
+
+.avaliacao label:before {
+    content: '\2605'; /* Estrela preenchida */
+}

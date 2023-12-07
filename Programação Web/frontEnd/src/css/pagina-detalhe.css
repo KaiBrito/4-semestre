@@ -1,0 +1,48 @@
+.h-100vh {
+    height: 100vh;
+}
+
+.overflow-y {
+    overflow-y: auto;
+}
+
+.avaliacao {
+    display: inline-block;
+}
+
+.avaliacao input {
+    display: none;
+}
+
+.avaliacao label {
+    float: right;
+    font-size: 30px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.avaliacao label:before {
+    content: '\2605'; /* Estrela vazia */
+}
+
+.avaliacao input:checked ~ label:before {
+    content: '\2605'; /* Estrela preenchida */
+    color: orange; /* Cor da estrela preenchida */
+}
+
+@media only screen and (max-width: 600px) {
+    .main-config {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .relacional-config {
+        width: auto;
+        height: auto;
+    }
+
+    .detalhe-config {
+        width: max-content;
+        height: auto;
+    }
+}

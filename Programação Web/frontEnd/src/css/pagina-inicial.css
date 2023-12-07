@@ -1,0 +1,7 @@
+.btn-inicial {
+    background-color: #FF6A28;
+}
+
+.btn-inicial:hover {
+    background-color: rgb(236, 116, 65);
+}

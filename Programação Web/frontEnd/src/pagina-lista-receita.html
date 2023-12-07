@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Vida mais saborosa">
+    <meta name="description" content="Um lugar onde você encontra as melhores receitas para deixar sua comida saborosa">
+    <meta name="copyright" content="&copy2023 VidaMaisSaborosa">
+    <meta name="keywords" content="comidas, receitas, vida, sabor, saborosa, bebidas">
+    <meta name="datecreate" content="30/10/2023">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/pagina-lista-receita.css">
+
+    <title>VidaMaisSaborosa</title>
+</head>
+<body class="bg-graymain">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-orange">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="imgs/logo-site.png" alt="logo site" class="img-config"></a>
+          <h1 class="m-2">Vida mais saborosa</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 mx-4 w-75">
+              <li class="nav-item mx-4 bg-yellow border-buttons buttons-header">
+                <a class="nav-link text-center" href="pagina-login.html">Login</a>
+              </li>
+              <li class="nav-item bg-yellow border-buttons buttons-header">
+                <a class="nav-link text-center" href="pagina-cadastro.html">Cadastre-se</a>
+              </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0" role="search">
+              <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0 button-search" type="submit"> <img src="imgs/lupa.png" width="30px"> </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <ul class="nav bg-gray overflow-x">
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="pagina-inicial.html">Início</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Massas</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Bebidas</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Bolos</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Carnes</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Sopas</a>
+        </li>
+        <li class="nav-item opt-menu">
+          <a class="nav-link text-dark border border-right" href="#">Sanduíches</a>
+        </li>
+      </ul>
+    </header>
+
+    <h2 class="text-center">Listas de receitas</h2>
+
+    <main class="width-95 mx-auto bg-white m-5 p-5 border rounded gap-2">
+        <h3 class="text-center">Massas</h3>
+        <section class="d-flex flex-row justify-content-center gap-3 flex-wrap">
+            <div class="card" style="width: 18rem;">
+              <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+              <div class="card-body">
+                <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+                <p>Descrição</p>
+                <p>Autor</p>
+                <div class="avaliacao">
+                  <label for="estrela1"></label>
+                  <label for="estrela2"></label>
+                  <label for="estrela3"></label>
+                  <label for="estrela4"></label>
+                  <label for="estrela5"></label>
+                </div>
+                <p class="mt-3 mb-0">Quantidade de usuários</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+              <div class="card-body">
+                <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+                <p>Descrição</p>
+                <p>Autor</p>
+                <div class="avaliacao">
+                  <label for="estrela1"></label>
+                  <label for="estrela2"></label>
+                  <label for="estrela3"></label>
+                  <label for="estrela4"></label>
+                  <label for="estrela5"></label>
+                </div>
+                <p class="mt-3 mb-0">Quantidade de usuários</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+              <div class="card-body">
+                <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+                <p>Descrição</p>
+                <p>Autor</p>
+                <div class="avaliacao">
+                  <label for="estrela1"></label>
+                  <label for="estrela2"></label>
+                  <label for="estrela3"></label>
+                  <label for="estrela4"></label>
+                  <label for="estrela5"></label>
+                </div>
+                <p class="mt-3 mb-0">Quantidade de usuários</p>
+              </div>
+            </div>
+        </section>
+
+        <h3 class="text-center">Bebidas</h3>
+        <section class="d-flex flex-row justify-content-center gap-3 flex-wrap">
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+           </div>
+           <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+        </section>
+
+        <h3 class="text-center">Sopas</h3>
+        <section class="d-flex flex-row justify-content-center gap-3 flex-wrap">
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+        </section>
+
+        <h3 class="text-center">Bolos</h3>
+        <section class="d-flex flex-row justify-content-center gap-3 flex-wrap">
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+        </section>
+
+        <h3 class="text-center">Sanduíches</h3>
+        <section class="d-flex flex-row justify-content-center gap-3 flex-wrap">
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+        </section>
+
+        <h3 class="text-center">Carnes</h3>
+        <section class="d-flex flex-row justify-content-center gap-3 flex-wrap">
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img src="imgs/comida.jpeg" class="card-img-top imagem" alt="..."></a> 
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-dark text-decoration-none" href="#">Nome</a></h5>
+              <p>Descrição</p>
+              <p>Autor</p>
+              <div class="avaliacao">
+                <label for="estrela1"></label>
+                <label for="estrela2"></label>
+                <label for="estrela3"></label>
+                <label for="estrela4"></label>
+                <label for="estrela5"></label>
+              </div>
+              <p class="mt-3 mb-0">Quantidade de usuários</p>
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <footer class="row bg-yellow py-2"> 
+      <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+        <span class="text-center">Kaique <br> e <br> Rômulo</span>
+      </div>
+      <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+        <span> 
+          <a href="https://github.com/KaiBrito">https://github.com/KaiBrito</a> <br>
+          <a href="https://github.com/Romulo-Moraes">https://github.com/Romulo-Moraes</a>
+        </span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

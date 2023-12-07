@@ -1,0 +1,271 @@
+Nome: KAIQUE JOSIAS BRITO
+
+Funcionario (matricula, nome, endereco)
+
+Meio (matricula, setor, fixo, gratificacao)
+
+Costureira (matricula, aliquota_fixa, salario, vlr_minimo, sup_costureira)
+
+Maquina (id_maquina, fabricante, situacao)
+
+Fornecedores (fornecedor, id_maquina)
+
+Manutencao (id_manutencao, dt_inicio, dt_fim, id_maquina, mat_costureira)
+
+TipoCostura (id_tipoCostura, descricao)
+
+Peca (id_peca, modelo, preco_venda, desc_modelo)
+
+Maquina_tem_TipoCostura(id_maquina, id_tipoCostura)
+
+Costureira_estaHabilitada_TipoCostura (mat_costureira, id_tipoCostura)
+
+Costureira_peca_maquina (mat_costureira, id_peca, id_maquina, dt_ini, dt_fim, hr_ini, hr_fim)
+
+
+
+--CREATE DATABASE fabrica_de_roupas;
+--USE fabrica_de_roupas;
+
+CREATE TABLE Funcionario (
+	matricula INT NOT NULL,
+	nome VARCHAR(45) NOT NULL,
+	endereco VARCHAR(100) DEFAULT 'não informado',
+	PRIMARY KEY (matricula)
+);
+
+CREATE TABLE Meio (
+	matricula INT NOT NULL,
+	setor VARCHAR(15) CHECK (setor IN ('ADM', 'TI', 'FINANCEIRO', 'RH', 'INFRA')),
+	fixo FLOAT(2),
+	gratificacao FLOAT(2) CHECK (gratificacao >= 0 AND gratificacao <= 5000),
+	PRIMARY KEY (matricula),
+	FOREIGN KEY (matricula) REFERENCES funcionario(matricula)
+);
+
+CREATE TABLE Costureira (
+	matricula INT NOT NULL,
+	aliquota_fixa FLOAT(2),
+	salario FLOAT(2),
+	vlr_minimo FLOAT(2),
+	sup_costureira INT,
+	PRIMARY KEY (matricula),
+	FOREIGN KEY (sup_costureira) REFERENCES Costureira(matricula)	
+);
+
+CREATE TABLE Maquina (
+	id_maquina INT NOT NULL,
+	fabricante VARCHAR(45),
+	situacao VARCHAR(50),
+	PRIMARY KEY (id_maquina)
+);
+
+CREATE TABLE Fornecedores (
+	fornecedor VARCHAR(50) NOT NULL,
+	id_maquina INT NOT NULL,
+	PRIMARY KEY (fornecedor, id_maquina),
+	FOREIGN KEY (id_maquina) REFERENCES Maquina(id_maquina)	
+);
+
+CREATE TABLE Manutencao (
+    id_manutencao INT NOT NULL,
+    dt_inicio DATE,
+    dt_fim DATE,
+    id_maquina INT,
+    mat_costureira INT,
+	PRIMARY KEY (id_manutencao),
+    FOREIGN KEY (id_maquina) REFERENCES Maquina(id_maquina),
+    FOREIGN KEY (mat_costureira) REFERENCES Costureira(matricula)	
+);
+
+CREATE TABLE TipoCostura (
+    id_tipoCostura INT NOT NULL,
+    descricao VARCHAR(100),
+	PRIMARY KEY (id_tipoCostura)
+);
+
+CREATE TABLE Peca (
+    id_peca INT NOT NULL,
+    modelo VARCHAR(45),
+    preco_venda FLOAT(2),
+    desc_modelo VARCHAR(100),
+	PRIMARY KEY (id_peca)
+);
+
+CREATE TABLE Maquina_tem_TipoCostura (
+    id_maquina INT NOT NULL,
+    id_tipoCostura INT NOT NULL,
+    PRIMARY KEY (id_maquina, id_tipoCostura),
+    FOREIGN KEY (id_maquina) REFERENCES Maquina(id_maquina),
+    FOREIGN KEY (id_tipoCostura) REFERENCES TipoCostura(id_tipoCostura)
+);
+
+CREATE TABLE Costureira_estaHabilitada_TipoCostura (
+    mat_costureira INT NOT NULL,
+    id_tipoCostura INT NOT NULL,
+    PRIMARY KEY (mat_costureira, id_tipoCostura),
+    FOREIGN KEY (mat_costureira) REFERENCES Costureira(matricula),
+    FOREIGN KEY (id_tipoCostura) REFERENCES TipoCostura(id_tipoCostura)
+);
+
+CREATE TABLE Costureira_peca_maquina (
+    mat_costureira INT NOT NULL,
+    id_peca INT NOT NULL,
+    id_maquina INT NOT NULL,
+    dt_ini DATE,
+    dt_fim DATE,
+    hr_ini TIME,
+    hr_fim TIME,
+    PRIMARY KEY (mat_costureira, id_peca, id_maquina),
+    FOREIGN KEY (mat_costureira) REFERENCES Costureira(matricula),
+    FOREIGN KEY (id_peca) REFERENCES Peca(id_peca),
+    FOREIGN KEY (id_maquina) REFERENCES Maquina(id_maquina)
+);
+
+
+
+INSERT INTO Funcionario (matricula, nome) VALUES
+    (1, 'João'),
+    (2, 'Maria'),
+    (3, 'Pedro'),
+    (4, 'Bruna'),
+	(5, 'José'),
+    (6, 'Kaio'),
+    (7, 'Pepeu'),
+    (8, 'Carol');
+
+INSERT INTO Meio VALUES
+    (1, 'ADM', 2500.00, 200.00),
+    (2, 'TI', 3000.00, 150.00),
+    (3, 'FINANCEIRO', 2800.00, 180.00),
+    (4, 'RH', 2700.00, 170.00);
+
+INSERT INTO Costureira VALUES
+    (5, 8.50, 2000.00, 1500.00, 6),
+    (6, 7.06, 2200.00, 1600.00, 7),
+    (7, 3.04, 1800.00, 1400.00, 8),
+    (8, 10.03, 1900.00, 1300.00, 5);
+
+INSERT INTO Maquina VALUES
+    (1, 'Empresa A', 'Em Uso'),
+    (2, 'Empresa B', 'Manutenção'),
+    (3, 'Empresa C', 'Disponível'),
+    (4, 'Empresa D', 'Em Uso');
+
+INSERT INTO Fornecedores VALUES
+    ('Fornecedor X', 1),
+    ('Fornecedor Y', 2),
+    ('Fornecedor Z', 3),
+    ('Fornecedor W', 4);
+
+INSERT INTO Manutencao VALUES
+    (1, '2023-07-01', '2023-07-03', 1, 5),
+    (2, '2023-07-05', '2023-07-07', 2, 6),
+    (3, '2023-07-10', '2023-07-12', 3, 7),
+    (4, '2023-07-15', '2023-07-17', 4, 8);
+
+INSERT INTO TipoCostura VALUES
+    (1, 'zig-zag'),
+    (2, 'fechada'),
+    (3, 'aberta'),
+    (4, 'francesa');
+
+INSERT INTO Peca VALUES
+    (1, 'Camisa', 30.00, 'Camisa de algodão'),
+    (2, 'Calça', 50.00, 'Calça jeans'),
+    (3, 'Vestido', 70.00, 'Vestido estampado'),
+    (4, 'Blusa', 25.00, 'Blusa de malha');
+
+INSERT INTO Maquina_tem_TipoCostura VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4);
+
+INSERT INTO Costureira_estaHabilitada_TipoCostura VALUES
+    (5, 1),
+    (6, 2),
+    (7, 3),
+    (8, 4);
+
+INSERT INTO Costureira_peca_maquina VALUES
+    (5, 1, 1, '2020-02-15', '2020-06-30', '08:00:00', '16:00:00'),
+    (6, 2, 2, '2023-06-15', '2023-06-30', '08:30:00', '16:30:00'),
+    (7, 3, 3, '2020-03-14', '2020-06-01', '09:00:00', '17:00:00'),
+    (8, 4, 4, '2023-06-15', '2023-06-30', '09:30:00', '17:30:00');
+
+
+
+-- Apresente o nome e salário mensal de cada funcionário da fábrica de roupas
+SELECT F.nome, SUM(M.fixo + M.gratificacao) As Salario_mensal
+FROM Funcionario As F
+	JOIN Meio As M ON F.matricula = M.matricula
+GROUP BY nome
+UNION
+SELECT nome, SUM(C.salario + C.aliquota_fixa)
+FROM Funcionario As F
+	JOIN Costureira As C ON F.matricula = C.matricula
+GROUP BY nome;
+
+--Apresente o código e o fabricante da máquina e tipo de costura das máquinas que nunca foram para a manutenção. --
+SELECT M.id_maquina, M.fabricante, TC.descricao
+FROM TipoCostura As TC
+	JOIN Maquina_tem_TipoCostura As MT on TC.id_tipoCostura = MT.id_tipoCostura
+	JOIN Maquina as M on MT.id_maquina = M.id_maquina
+EXCEPT
+SELECT M.id_maquina, M.fabricante, TC.descricao
+FROM TipoCostura as TC
+	JOIN Maquina_tem_TipoCostura As MT on TC.id_tipoCostura = MT.id_tipoCostura
+	JOIN Maquina as M on MT.id_maquina = M.id_maquina
+	JOIN Manutencao as Ma on Ma.id_maquina = M.id_maquina;
+
+--Apresente quantas peças foram produzidas por cada costureira no mês agosto de 2020.
+SELECT F.nome, COUNT(CPM.id_peca) As pecas_produzidas
+FROM Costureira As C
+	JOIN Funcionario As F ON C.matricula = F.matricula
+	JOIN Costureira_peca_maquina As CPM ON C.matricula = CPM.mat_costureira
+	JOIN Manutencao As M ON C.matricula = M.mat_costureira
+WHERE EXTRACT(MONTH FROM dt_ini) = 8
+GROUP BY C.matricula, F.nome;
+
+--Apresente o código e o fabricante da máquina que produziu mais peças.
+SELECT M.id_maquina, M.fabricante
+FROM Maquina As M
+	JOIN Costureira_peca_maquina As CPM ON M.id_maquina = CPM.id_maquina
+GROUP BY M.id_maquina, M.fabricante
+ORDER BY COUNT(CPM.id_maquina) DESC
+LIMIT 1;
+
+--Apresente o nome das costureiras estão disponíveis e habilitadas a trabalhar com tipo de costura “zig-zag”
+SELECT F.nome
+FROM Costureira As C
+	JOIN Funcionario As F ON C.matricula = F.matricula
+	JOIN Costureira_estaHabilitada_TipoCostura As CHT ON C.matricula = CHT.mat_costureira
+	JOIN TipoCostura As TC ON CHT.id_tipoCostura = TC.id_tipoCostura
+WHERE TC.descricao = 'zig-zag';
+
+--Apresente a relação das máquinas que estiveram mais de 10 vezes em conserto, contendo: código da máquina e para cada conserto, matrícula e nome da supervisora 
+--responsável, data início e término do conserto.
+SELECT M.id_maquina, F.matricula, F.nome, M.dt_inicio, M.dt_fim
+FROM Manutencao As M
+	JOIN Costureira As C ON M.mat_costureira = C.matricula
+	JOIN Funcionario As F ON C.matricula = F.matricula
+GROUP BY M.id_maquina, F.matricula, F.nome, M.dt_inicio, M.dt_fim
+HAVING COUNT(M.id_maquina) > 10;
+
+--Apresente quantas peças foram produzidas por máquina em um determinado de 01/01/2020 a 15/07/2020.
+SELECT COUNT(*) As Qtd_Peças
+FROM Costureira_peca_maquina
+WHERE dt_ini >= '2020-01-11' AND dt_fim <= '2020-07-15';
+
+-- Apresentar as costureiras sem produção no período (matrícula da costureira, nome, valor mínimo).
+SELECT F.matricula, F.nome, C.vlr_minimo
+FROM Costureira_peca_maquina As CPM
+	JOIN Costureira As C ON CPM.mat_costureira = C.matricula
+	JOIN Funcionario As F ON C.matricula = F.matricula
+WHERE dt_ini < '2020-01-11' OR dt_fim > '2020-07-15';
+
+
+
+
+

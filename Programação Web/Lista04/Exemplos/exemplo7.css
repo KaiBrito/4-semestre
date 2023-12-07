@@ -1,0 +1,11 @@
+﻿p {
+      font-size:30px;
+      color:#FF0000;   }
+
+p.verde {
+      font-size:30px;
+      color:#00FF00;   }
+
+p#azul {
+      font-size:60px;
+      color:#0000FF;   }

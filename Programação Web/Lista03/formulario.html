@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Aula sobre formulários</title>
+    </head>
+    <body>
+        <form action="http://cafe.intermidia.icmc.usp.br:22080/humberto/formulario.php" method="post" enctype="multipart/form-data">
+            <fieldset id="cadastro">
+                <legend>Matricular aluno</legend>
+                <input type="hidden" name="nTime" value="Vasco" />
+                <div>
+                    <label for="txtNome">Nome:</label>
+                    <input type="text" name="nNome" id="txtNome" maxlength="10" placeholder="Digite seu nome" />
+                </div>
+                <div>
+                    <label for="txtEmail">eMail:</label>
+                    <input type="email" name="nEmail" id="txtEmail" size="20" placeholder="Digite seu email" />
+                </div>
+                <div>
+                    <label for="txtIdade">Idade:</label>
+                    <input type="number" name="nIdade" id="txtIdade" min="15" max="60" value="40" />
+                </div>
+                <div>
+                    <label for="txtDataNascimento">Data de Nascimento:</label>
+                    <input type="date" name="nDataNascimento" id="txtDataNascimento">
+                </div>
+                <div>
+                    Sexo: 
+                    <input type="radio" name="nSexo" id="radioMasc" value="M" checked />
+                    <label for="radioMasc">Masculino</label> 
+                    <input type="radio" name="nSexo" id="radioFem" value="F" />
+                    <label for="radioFem">Feminino</label>
+                </div>
+                <div>
+                    <label for="selEstado">Estado:</label>
+                    <select name="nEstado" id="selEstado">
+                        <optgroup label="Região Sudeste">
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option value="RS">Rio Grande do Sul</option>
+                        </optgroup>
+                        <optgroup label="Região Centro-oeste">
+                            <option value="MS" selected>Mato Grosso do Sul</option>
+                        </optgroup>
+                        <option>Tocantins</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="txtCidade">Cidade:</label>
+                    <input type="text" name="nCidade" id="txtCidade" list="listCidades">
+                    <datalist id="listCidades">
+                        <option>Rio de Janeiro</option>
+                        <option>São Paulo</option>
+                        <option>São Carlos</option>
+                        <option>Três Lagoas</option>
+                        <option>Campo Grande</option>
+                    </datalist>
+                </div>
+                <div>
+                    <label for="txtFale">Fale sobre você:</label>
+                    <textarea name="nFale" id="txtFale" cols="45" rows="2"></textarea>
+                </div>
+                <div>
+                    <label for="txtColor">Cor da camiseta:</label>
+                    <input type="color" name="nColor" id="txtColor" value="#00FFFF" />
+                </div>
+                <div>
+                    <label for="selIngles">Nível de conhecimento de inglês: </label>
+                    baixo
+                    <input type="range" name="nIngles" id="selIngles" min="0" max="10" step="1">
+                    alto
+                </div>
+                <div>
+                    <input type="checkbox" name="nNoticias" id="txtNoticias" checked>
+                    <label for="txtNoticias">Quero receber emails com notícias</label>
+                </div>
+                <div>
+                    <label for="txtMatricula">Matricula:</label>
+                   <input type="text" placeholder="QRB-001" name="nCodigo" id="txtMatricula" 
+                          title="O código deve possuir 3 letras maiúsculas, traço, e 3 números" 
+                          pattern="[A-Z]{3}-[0-9]{3}" />
+                </div>
+
+                <div>
+                    <label for="fileFoto">Foto:</label>
+                    <input type="file" name="nFoto[]" id="fileFoto" multiple="" />
+                </div>
+                
+                <input type="reset" value="Apagar" />
+                <input type="submit" name="Enviar" />
+
+
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+nav ul li a {
+    transition: all 2s;
+    text-decoration: none;
+    color: red;
+}
+
+li {
+    text-transform: none;
+}
+
+h2 {
+    background-color: aquamarine;
+    padding: 15px;
+    width: 30%;
+}
+
+p {
+    border: 2px solid black;
+}
+
+/*Deixa o scroll da página um pouco lento*/
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    display: inline;
+    padding: 15px;
+    background-color: aqua;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#btn-scroll a img {
+    width: 20px;
+}
+
+#btn-scroll:hover {
+    background-color: blueviolet;
+    transition-delay: .3s;
+}
